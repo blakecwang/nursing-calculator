@@ -49,12 +49,18 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
-        <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
-        <ul class="list-unstyled">
-          <li>Bootstrap 4.5.0</li>
-          <li>jQuery 3.5.1</li>
-        </ul>
+        <h1 class="mt-5">Nursing Calculator</h1>
+        <form>
+          <div class="form-group">
+            <label for="feed-time">Last feeding</label>
+            <input type="time" id="feed-time" name="feed-time">
+          </div>
+          <div class="form-group">
+            <label for="bed-time">Bedtime</label>
+            <input type="time" id="bed-time" name="bed-time">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
     </div>
   </div>
@@ -62,6 +68,26 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <!--  <script src="main.js"></script> -->
+
+  <script type="text/javascript">
+//    $(function () {
+//      $('#datetimepicker1').datetimepicker();
+//    });
+//    $(document).ready(function() {
+//      $("#datetimepicker1").datetimepicker();
+//    });
+  </script>
+
+  <script type="text/javascript">
+//    $(function () {
+//      $('#datetimepicker3').datetimepicker({
+//        format: 'LT'
+//      });
+//    });
+  </script>
 
 </body>
 
