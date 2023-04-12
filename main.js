@@ -18,7 +18,7 @@ $(function() {
     while (slop < prevSlop) {
       numFeedings += 1
       prevSlop = slop;
-      slop = Math.abs(3 - elapsed / numFeedings);
+      slop = Math.abs(2.5 - elapsed / numFeedings);
     }
     var interval = elapsed / (numFeedings - 1);
 
