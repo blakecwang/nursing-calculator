@@ -18,7 +18,7 @@ $(function() {
     while (slop < prevSlop) {
       numFeedings += 1
       prevSlop = slop;
-      slop = Math.abs(2.5 - elapsed / numFeedings);
+      slop = Math.abs(2.75 - elapsed / numFeedings);
     }
     var interval = elapsed / (numFeedings - 1);
 
@@ -38,7 +38,7 @@ $(function() {
 
     // Display feedings to user.
     alert(feedings);
-    
+
     event.preventDefault();
   });
 });
