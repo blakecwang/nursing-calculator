@@ -7,6 +7,9 @@ $(function() {
     var lastFeed = Date.parse(
       '01 Jan 1970 ' + $("#last-feed").val() + ':00 GMT'
     );
+    var hours = parseInt($("#hours-dropdown").val(), 10);
+    var minutes = parseInt($("#minutes-dropdown").val(), 10);
+    var period = hours + minutes / 60
 
     // Calculate elapsed time.
     var elapsed = (lastFeed - firstFeed) / 3600000;
@@ -18,7 +21,7 @@ $(function() {
     while (slop < prevSlop) {
       numFeedings += 1
       prevSlop = slop;
-      slop = Math.abs(2.75 - elapsed / numFeedings);
+      slop = Math.abs(period - elapsed / numFeedings);
     }
     var interval = elapsed / (numFeedings - 1);
 

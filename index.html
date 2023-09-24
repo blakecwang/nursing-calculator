@@ -13,6 +13,11 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Custom CSS -->
+  <style>
+    #hours-dropdown {margin-right: 1rem;}
+  </style>
+
 </head>
 
 <body>
@@ -24,11 +29,28 @@
         <form id="my-form">
           <div class="form-group">
             <label for="first-feed">First feeding</label>
-            <input type="time" id="first-feed" name="first-feed" value="05:30" required>
+            <input type="time" id="first-feed" name="first-feed" value="06:30" required>
           </div>
           <div class="form-group">
             <label for="last-feed">Last feeding</label>
             <input type="time" id="last-feed" name="last-feed" value="17:00" required>
+          </div>
+          <h4>Loop every</h4>
+          <div class="form-group">
+            <label for="hours">Hours</label>
+            <select id="hours-dropdown" name="hours">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+              <option value="4">4</option>
+            </select>
+            <label for="minutes">Minutes</label>
+            <select id="minutes-dropdown" name="minutes">
+              <option value="0">0</option>
+              <option value="15">15</option>
+              <option value="30" selected>30</option>
+              <option value="45">45</option>
+            </select>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
