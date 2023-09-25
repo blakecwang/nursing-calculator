@@ -35,9 +35,18 @@ $(function() {
       if (h == 0) {
         h = 12;
       }
+
+      // Round to nearest 5
+      arr[1] = Math.round(arr[1] / 5) * 5;
+
       feedings.push(h + ":" + arr[1]);
       currFeed += interval * 3600000;
     }
+    // Show interval
+    var intervalHours = Math.floor(interval)
+    var intervalMinutes = Math.round((interval - intervalHours) * 60)
+    var intervalStr = `${intervalHours}:${intervalMinutes} loop`;
+    feedings.unshift(intervalStr)
 
     // Display feedings to user.
     alert(feedings);
